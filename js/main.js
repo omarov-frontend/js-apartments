@@ -1,7 +1,9 @@
-document.querySelector('#calc').onclick = function() {
-    let flat = document.querySelector('#flat').value;
+const calcBtn = document.querySelector('#calc');
 
-    flat = parseInt(flat);
+calcBtn.addEventListener('click', function() {
+    let flat = document.querySelector('#flat');
+
+    flat = parseInt(flat.value);
 
     if( flat >= 1 && flat <= 20 ) {
         alert('Первый подъезд');
@@ -12,4 +14,4 @@ document.querySelector('#calc').onclick = function() {
     } else {
         alert('ОШИБКА, повторите ввод!');
     }
-}
+})
