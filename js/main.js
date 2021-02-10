@@ -1,17 +1,18 @@
+const flatNumber = document.querySelector('#flat-number');
 const calcBtn = document.querySelector('#calc');
+const message = document.querySelector('#message');
 
 calcBtn.addEventListener('click', function() {
-    let flat = document.querySelector('#flat');
+    const flatNumberValue = Number(flatNumber.value)
 
-    flat = parseInt(flat.value);
-
-    if( flat >= 1 && flat <= 20 ) {
-        alert('Первый подъезд');
-    } else if( flat >= 21 && flat <= 48 ) {
-        alert('Второй подъезд');
-    } else if( flat >= 49 && flat <= 90 ) {
-        alert('Третий подъезд');
-    } else {
-        alert('ОШИБКА, повторите ввод!');
+    console.log(flatNumberValue);
+    if (flatNumberValue < 1 || flatNumberValue > 90) {
+        message.textContent = 'ОШИБКА, повторите ввод!';
+    } else if (flatNumberValue < 20) {
+        message.textContent = 'Первый подъезд!';
+    } else if (flatNumberValue < 48) {
+        message.textContent = 'Второй подъезд!';
+    } else if (flatNumberValue < 90) {
+        message.textContent = 'Третий подъезд!';
     }
 })
