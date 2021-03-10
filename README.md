@@ -6,4 +6,4 @@
 
 > Программа должна учитывать вариант ввода чисел за пределами диапазона 1 ..90
 
-Demo - https://omarov-frontend.github.io/js-apartments/
+Demo - https://omarovfrontend.github.io/js-apartments/
